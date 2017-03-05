@@ -22,13 +22,13 @@ node_modules/ node dependency libraries
 
 1. make sure you have Nodejs
 2. Download / clone this repo to your local computer.
-3. run npm install on your folder location terminal.
+3. run `<npm install>` on your folder location terminal.
 
 
 ### Command
 
-grunt test to start your development environment.
+`<grunt test>` to start your development environment.
 
-grunt miniAll to minify js, image, html, and css.
+`<grunt miniAll>` to minify js, image, html, and css.
 
 
