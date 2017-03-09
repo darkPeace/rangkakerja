@@ -23,8 +23,13 @@ Initializr
 ## Guide
 
 1. make sure you have Nodejs
-2. Download / clone this repo to your local computer.
-3. run `npm install` on your folder location terminal.
+2. Install [Gruntjs](https://gruntjs.com/) on your computer
+```
+	npm insaall -g grunt-cli
+```
+3. Download / clone this repo to your local computer.
+4. run `npm install` on your folder location terminal.
+5. run `bower init` 
 
 
 ### Command
@@ -33,4 +38,7 @@ Initializr
 
 `grunt miniAll` to minify js, image, html, and css.
 
+
+### References
+[Bower API](https://bower.io/docs/api/)
 
