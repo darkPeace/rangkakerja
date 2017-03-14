@@ -1,44 +1,24 @@
-# baredevn
+# rangkakerja
+hakcipta terpelihara 2017©
 
-skeleton environment for web development startup.
+kerjaku xsiap2 lg ;(
 
-Nodejs
+	Nodejs
 
-Grunt
+	Grunt
 
-Bower 
-
-Initializr
+	Bower
 
 ## Description
 
-`src/` is your development code
+`src/` - development code
 
-`rel/` is your releleased code will be
+`libs/` - bower dependency library
 
-`libs/` is all your bower dependency library will go
-
-`node_modules/` node dependency libraries
-
-## Guide
-
-1. make sure you have Nodejs
-2. Install [Gruntjs](https://gruntjs.com/) on your computer
-```
-	npm insaall -g grunt-cli
-```
-3. Download / clone this repo to your local computer.
-4. run `npm install` on your folder location terminal.
-5. run `bower init` 
-
+`node_modules/` - node dependency libraries
 
 ### Command
 
 `grunt test` to start your development environment.
 
 `grunt miniAll` to minify js, image, html, and css.
-
-
-### References
-[Bower API](https://bower.io/docs/api/)
-
