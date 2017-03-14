@@ -1,0 +1,12 @@
+<div class="brand" ng-click="locate('')">
+  <img ng-src="{{brand.imgUrl}}" alt="logo syarikat">
+  <div class="brand-title">
+    {{ brand.name }} 
+  </div>
+</div>
+
+<div class="header-menu">
+  <md-button ng-repeat="menu in menulist" ng-click="locate(menu.url)">
+    {{ menu.name }}
+  </md-button>
+</div>

@@ -65,7 +65,7 @@ module.exports = function (grunt) {
 		wiredep: {
 			task: {
 				src: [
-					'src/index.html'
+					'index.html'
 				],
 
 				options: {}
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
 			},
 			test:{
 				options: {
-					base: 'src',
+					base: '',
 					open: {
 						app: 'Firefox'
 					}
@@ -91,6 +91,13 @@ module.exports = function (grunt) {
 		},
 
 		copy: {
+			htm: {
+				files:[{
+					expand:false,
+					src: 'src/index.html',
+					dest: 'index.html'
+				}]
+			},
 			main: {
 				files: [{
 					expand: true,
@@ -111,23 +118,27 @@ module.exports = function (grunt) {
 			},
 			grunT: {
 				files: ['Gruntfile.js'],
+				options: {
+					livereload: '<%= connect.options.livereload %>'
+				}
 			},
 			html: {
 				files: ['src/**/*.html'],
+				tasks: ['copy:htm', 'wiredep'],
 				options: {
 					livereload: '<%= connect.options.livereload %>'
 				}
 			},
 			js: {
 				files: ['src/**/*.js', '!src/min/*.min.js'],
-				tasks: ['jshint:raw', 'uglify'],
+				tasks: [''],
 				options: {
 					livereload: '<%= connect.options.livereload %>'
 				}
 			},
 			css: {
 				files: ['src/**/*.css', '!src/min/*.min.css'],
-				tasks: ['cssmin'],
+				tasks: [''],
 				options: {
 					livereload: '<%= connect.options.livereload %>'
 				}
@@ -150,6 +161,24 @@ module.exports = function (grunt) {
 			rel: ['rel/**/*.js']
 		},
 
+		includeFiles: {
+		  options: {
+		    basePath: '',
+		    baseUrl: 'src',
+		    templates: {
+		      html: {
+		        js: '<script src="{filePath}"></script>',
+		        css: '<link rel="stylesheet" type="text/css" href="{filePath}" />'
+		    	}
+		    }
+		  },
+		  myTarget: {
+		    files: {
+		      'index.html': 'src/index.html'
+		    }
+		  }
+		}
+
 	});
 
 	grunt.registerTask('miniall','minify All src/ folder', [
@@ -160,6 +189,7 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('test','serve the files', [
+		'copy:htm',
 		'wiredep',
 		'connect:test',
 		'watch'
