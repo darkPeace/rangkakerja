@@ -17,7 +17,9 @@
     <body>
         <!-- uiview injector -->
         <header class="header md-whiteframe-24dp" ui-view="header"></header>
-        <div ui-view="body"></div>
+        <div ui-view="leftnav"></div>
+        <div ui-view="rightnav"></div>
+        <md-content flex layout-padding ui-view="body" class="body"></md-content>
         <div ui-view="footer"></div>
 
         <!-- bower:js -->

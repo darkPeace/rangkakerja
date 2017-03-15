@@ -9,7 +9,7 @@ angular.module('uirconfig', ['ui.router'])
 				controller: 'header-controller'
 			},
 			'body@': {
-				templateUrl: 'src/body/content/body.html'
+				templateUrl: 'src/body/content/frontpage.html'
 				// controller: 'header-controller'
 			},
 			'footer@': {
