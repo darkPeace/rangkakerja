@@ -4,3 +4,6 @@ libs/*
 !libs/.resv
 bower.json
 test.js
+tile.png
+tile.jpg
+src/body/content/houseOfcards.html
