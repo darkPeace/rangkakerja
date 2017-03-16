@@ -12,16 +12,18 @@
 </div>
 
 
-modalism knickers vitrifaction ischemia vindicator epanisognathous merohedrism Josephinism nonrealization antimacassar amenorrhoea pinken undoubting polypragmacy Masora snooziness queasily endophytically epipolism Anthesteria auricularly ethnogeographic cofreighter emydian
 
-<md-button ui-sref="home.signin">signin</md-button>
+
+<md-button ui-sref="home">HOme</md-button>
 <md-button ng-click=count()>count {{items}}</md-button>
 <md-button ng-mouseenter="openNav('left')">left nav</md-button>
 <md-button ng-mouseenter="openNav('right')">right nav</md-button>
 
 <div ui-view="leftnav"></div>
 <div ui-view="rightnav"></div>
-<div ui-view="content"></div>
+<div ui-view="content">
+  <md-button ui-sref="home.signin">signin</md-button>
+</div>
 
 <md-menu>
   <md-button 

@@ -8,6 +8,7 @@ angular.module('themeConfig', ['ngMaterial'])
 
     material
     .theme('default')
+    .primaryPalette('grey',{'default': '900'})
     .dark();
 
     material.setDefaultTheme('default');

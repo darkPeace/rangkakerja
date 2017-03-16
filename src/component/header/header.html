@@ -1,4 +1,12 @@
-<div class="brand" ng-click="locate('')">
+<md-toolbar class="md-theme-black md-whiteframe-24dp">
+	<div class="md-toolbar-tools">
+		<h1 flex md-truncate>Toos</h1>
+
+		<md-button ng-click="closeNav('right')"><md-icon>clear</md-icon></md-button>
+	</div>
+</md-toolbar>
+
+<!-- <div class="brand" ng-click="locate('')">
   <img ng-src="{{brand.imgUrl}}" alt="logo syarikat">
   <div class="brand-title">
     <span class="md-headline">{{ brand.name }}</span>
@@ -9,4 +17,4 @@
   <md-button ng-repeat="menu in menulist" ng-click="locate(menu.url)">
     {{ menu.name }}
   </md-button>
-</div>
+</div> -->

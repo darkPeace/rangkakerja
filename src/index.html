@@ -15,8 +15,43 @@
         <base href="/">
     </head>
     <body>
+        <md-toolbar class="md-medium-tall md-whiteframe-24dp" md-scroll-shrink layout-padding layout="row">
+            <img src="tile.jpg" class="header-img">
+            <div flex>
+                <div layout="row">
+                    <span class="md-display-1" flex md-truncate>Toos</span>
+
+                    <md-menu-bar class="header">
+                     <md-menu>
+                       <md-button ng-click="$mdMenu.open()">
+                         Sample Menu
+                       </md-button>
+                       <md-menu-content>
+                         <md-menu-item type="checkbox" ng-model="settings.allowChanges">Allow changes</md-menu-item>
+                         <md-menu-divider></md-menu-divider>
+                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 1</md-menu-item>
+                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 2</md-menu-item>
+                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 3</md-menu-item>
+                       </md-menu-content>
+                     </md-menu>
+                     <md-menu>
+                       <md-button ng-click="$mdMenu.open()">
+                         Sample Menu
+                       </md-button>
+                       <md-menu-content>
+                         <md-menu-item type="checkbox" ng-model="settings.allowChanges">Allow changes</md-menu-item>
+                         <md-menu-divider></md-menu-divider>
+                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 1</md-menu-item>
+                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 2</md-menu-item>
+                       </md-menu-content>
+                     </md-menu>
+                    </md-menu-bar>
+                </div>
+            </div>
+        </md-toolbar>
+
         <!-- uiview injector -->
-        <header class="header md-whiteframe-24dp" ui-view="header"></header>
+        <!-- <header class="header md-whiteframe-24dp" ui-view="header"></header> -->
         <md-content layout-padding ui-view="body" class="body"></md-content>
         <div ui-view="footer"></div>
 

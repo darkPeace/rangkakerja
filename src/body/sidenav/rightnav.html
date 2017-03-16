@@ -1,12 +1,14 @@
 <md-sidenav class="md-sidenav-right" md-component-id="right" md-whiteframe="4">
 
 	<md-toolbar class="md-theme-indigo">
-	<h1 class="md-toolbar-tools">Tools</h1>
+		<div class="md-toolbar-tools">
+			<h1 flex md-truncate>Toos</h1>
+
+			<md-button ng-click="closeNav('right')"><md-icon>clear</md-icon></md-button>
+		</div>
 	</md-toolbar>
 	<md-content layout-padding>
-		<md-button ng-click="closeNav('right')" class="md-primary">
-			Close Sidenav right
-		</md-button>
+		
 		<p>
 			This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
 		</p>
