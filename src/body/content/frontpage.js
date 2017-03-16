@@ -1,11 +1,21 @@
 angular.module('front-module',[])
 
 .controller('front-controller',
-['$scope', '$timeout',
-function function_name(vm, timo) {
+['$scope', '$timeout', '$mdSidenav',
+function function_name(vm, timo, sidenav) {
 
 	vm.id=0;
 	vm.slides=false;
+
+	vm.items = 0;
+
+	vm.openNav = function (arg) {
+		sidenav(arg).open();
+	}
+
+	vm.closeNav = function (arg) {
+		sidenav(arg).close();
+	}
 
 	vm.slideshows = [/*{
 		title: 'title',
@@ -38,6 +48,8 @@ function function_name(vm, timo) {
 		timo(slideplay,4000);
 	}
 
-
+	vm.count = function () {
+		vm.items++;
+	}
 
 }]);

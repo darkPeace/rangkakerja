@@ -22,16 +22,16 @@ angular.module('uirconfig', ['ui.router'])
 		// url: '/sign',
 		views: {
 			'content': {
-				templateUrl: 'src/body/content/login.html'/*,
-				controller: 'header-controller'
+				templateUrl: 'src/body/content/login.html',
+				// controller: 'header-controller'
 			},
-			'body@': {
-				templateUrl: 'src/body/content/frontpage.html',
-				controller: 'front-controller'
+			'leftnav': {
+				templateUrl: 'src/body/sidenav/leftnav.html',
+				// controller: 'front-controller'
 			},
-			'footer@': {
-				templateUrl: 'src/component/footer/footer.html',
-				controller: 'footer-controller'*/
+			'rightnav': {
+				templateUrl: 'src/body/sidenav/rightnav.html',
+				// controller: 'footer-controller'
 			}
 		}
 	});
