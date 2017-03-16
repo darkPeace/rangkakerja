@@ -3,4 +3,22 @@ header .brand {float: left; }
 header .header-menu {float: right; }
 header .brand img{height: 64px; width: 64px; }
 .brand img, .brand-title, .header-menu{display: inline-block; text-align: center; vertical-align: middle; line-height: 70px; }
-.body{min-height: calc(100% - 203px); }
+.body{min-height: calc(100% - 219px); }
+.cust-img-card{width: 120px; height: 120px; margin: 0px 10px;}
+.slidewhow{
+	position: relative;
+}
+.slideshow-img{
+	max-width: calc(100vw - 50px);
+	max-height: calc(100vh - 100px);
+}
+.slideshow-caption{
+	position: absolute;
+	margin-top: -120px;
+	margin-left: 50px;
+	width: 500px;
+	text-align: left;
+	background-color: rgba(0,0,0,0.4);
+	padding: 0px 15px;
+
+}

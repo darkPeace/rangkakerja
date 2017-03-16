@@ -6,6 +6,6 @@ angular.module('pitxweb', [
 	'cusdirv',
 	
 	'header-module',
-	'footer-module',
-
+	'front-module',
+	'footer-module'
 	]);

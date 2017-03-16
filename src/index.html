@@ -10,15 +10,14 @@
 
         <!-- bower:css -->
         <!-- endbower -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="src/css/main.css">
-        <!-- <base href="/"> -->
+        <base href="/">
     </head>
     <body>
         <!-- uiview injector -->
         <header class="header md-whiteframe-24dp" ui-view="header"></header>
-        <div ui-view="leftnav"></div>
-        <div ui-view="rightnav"></div>
-        <md-content flex layout-padding ui-view="body" class="body"></md-content>
+        <md-content layout-padding ui-view="body" class="body"></md-content>
         <div ui-view="footer"></div>
 
         <!-- bower:js -->
@@ -29,5 +28,6 @@
         <script src="src/js/directive.js"></script>
         <script src="src/component/header/header.js"></script>
         <script src="src/component/footer/footer.js"></script>
+        <script src="src/body/content/frontpage.js"></script>
     </body>
 </html>

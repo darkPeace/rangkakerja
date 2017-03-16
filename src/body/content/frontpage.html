@@ -1,0 +1,42 @@
+<div ng-if="slides">
+  <center class="slideshow">
+    <img ng-src="{{slideshows[id].imgUrl}}" class="slideshow-img">
+    <div class="slideshow-caption">
+      <h2>{{ slideshows[id].title }}</h2>
+      <p>{{ slideshows[id].caption }}</p>
+    </div>
+  </center>
+  <md-icon ng-repeat="slide in slideshows" ng-click="set($index)">
+    stars
+  </md-icon>
+</div>
+
+
+modalism knickers vitrifaction ischemia vindicator epanisognathous merohedrism Josephinism nonrealization antimacassar amenorrhoea pinken undoubting polypragmacy Masora snooziness queasily endophytically epipolism Anthesteria auricularly ethnogeographic cofreighter emydian
+
+<md-button ui-sref="home.signin">signin</md-button>
+
+<div ui-view="leftnav"></div>
+<div ui-view="rightnav"></div>
+<div ui-view="content"></div>
+
+<md-menu>
+  <md-button 
+  class="md-fab md-fab-bottom-right"
+   ng-mouseenter="$mdMenu.open()">
+    <md-icon>beach_access</md-icon>
+  </md-button>
+  <md-menu-content ng-mouseleave="$mdMenu.close()">
+    <md-menu-item>
+      <md-button>
+        N33d Help?
+      </md-button>
+      <md-button>
+        payung
+      </md-button>
+      <md-button>
+        Option
+      </md-button>
+    </md-menu-item>
+  </md-menu-content>
+</md-menu>
