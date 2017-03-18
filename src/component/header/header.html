@@ -1,20 +1,32 @@
-<md-toolbar class="md-theme-black md-whiteframe-24dp">
-	<div class="md-toolbar-tools">
-		<h1 flex md-truncate>Toos</h1>
+<md-toolbar class="md-medium-tall md-whiteframe-24dp" md-scroll-shrink layout-padding layout="row" ng-controller="header-controller">
+    <img ng-src="{{brand.imgUrl}}" alt="logo syarikat" class="header-img" ng-click="locate('')"/>
+    <div flex>
+        <div layout="row">
+            <span class="md-display-2" flex md-truncate>{{ brand.name }}</span>
 
-		<md-button ng-click="closeNav('right')"><md-icon>clear</md-icon></md-button>
-	</div>
+            <md-menu-bar class="header">
+             <md-menu ng-repeat="menu in menulist">
+               <md-button ng-click="openpg($mdMenu, menu.url)">
+                 {{ menu.name }}
+               </md-button>
+               <md-menu-content>
+                 <md-menu-item ng-if="menu.subs" type="checkbox" ng-repeat="sub in menu.subs" ui-sref="{{ sub.sref }}">{{ sub.name }}</md-menu-item>
+               </md-menu-content>
+             </md-menu>
+            </md-menu-bar>
+        </div>
+    </div>
 </md-toolbar>
 
-<!-- <div class="brand" ng-click="locate('')">
-  <img ng-src="{{brand.imgUrl}}" alt="logo syarikat">
+<!-- <div class="brand"">
+  <img >
   <div class="brand-title">
-    <span class="md-headline">{{ brand.name }}</span>
+    <span class="md-headline"></span>
   </div>
 </div>
 
 <div class="header-menu">
-  <md-button ng-repeat="menu in menulist" ng-click="locate(menu.url)">
-    {{ menu.name }}
+  <md-button  ng-click="locate(menu.url)">
+    
   </md-button>
 </div> -->

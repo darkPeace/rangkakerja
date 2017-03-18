@@ -16,34 +16,19 @@
         <base href="/">
     </head>
     <body>
-        <md-toolbar class="md-medium-tall md-whiteframe-24dp" md-scroll-shrink layout-padding layout="row">
-            <img src="tile.jpg" class="header-img">
+        <md-toolbar class="md-medium-tall md-whiteframe-24dp" md-scroll-shrink layout-padding layout="row" ng-controller="header-controller">
+            <img ng-src="{{brand.imgUrl}}" alt="logo syarikat" class="header-img" ng-click="locate('')"/>
             <div flex>
                 <div layout="row">
-                    <span class="md-display-1" flex md-truncate>Toos</span>
+                    <span class="md-display-2" flex md-truncate>{{ brand.name }}</span>
 
                     <md-menu-bar class="header">
-                     <md-menu>
-                       <md-button ng-click="$mdMenu.open()">
-                         Sample Menu
+                     <md-menu ng-repeat="menu in menulist">
+                       <md-button ng-click="openpg($mdMenu, menu.url)">
+                         {{ menu.name }}
                        </md-button>
                        <md-menu-content>
-                         <md-menu-item type="checkbox" ng-model="settings.allowChanges">Allow changes</md-menu-item>
-                         <md-menu-divider></md-menu-divider>
-                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 1</md-menu-item>
-                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 2</md-menu-item>
-                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 3</md-menu-item>
-                       </md-menu-content>
-                     </md-menu>
-                     <md-menu>
-                       <md-button ng-click="$mdMenu.open()">
-                         Sample Menu
-                       </md-button>
-                       <md-menu-content>
-                         <md-menu-item type="checkbox" ng-model="settings.allowChanges">Allow changes</md-menu-item>
-                         <md-menu-divider></md-menu-divider>
-                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 1</md-menu-item>
-                         <md-menu-item type="radio" ng-model="settings.mode" ng-value="1">Mode 2</md-menu-item>
+                         <md-menu-item ng-if="menu.subs" type="checkbox" ng-repeat="sub in menu.subs" ui-sref="{{ sub.sref }}">{{ sub.name }}</md-menu-item>
                        </md-menu-content>
                      </md-menu>
                     </md-menu-bar>
