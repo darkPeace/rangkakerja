@@ -39,7 +39,14 @@
         <!-- uiview injector -->
         <!-- <header class="header md-whiteframe-24dp" ui-view="header"></header> -->
         <md-content layout-padding ui-view="body" class="body"></md-content>
-        <div ui-view="footer"></div>
+        <!-- <div ui-view="footer"></div> -->
+        <!-- // uiview injector -->
+        <md-toolbar class="md-tall md-accent" layout="row">
+          <div flex>
+          </div>
+          <div flex>
+          </div>
+        </md-toolbar>
 
         <!-- bower:js -->
         <script src="libs/angular/angular.js"></script>
@@ -56,5 +63,6 @@
         <script src="src/component/header/header.js"></script>
         <script src="src/component/footer/footer.js"></script>
         <script src="src/body/content/frontpage.js"></script>
+        <script src="src/body/pieces/tabbed/tabbed.js"></script>
     </body>
 </html>

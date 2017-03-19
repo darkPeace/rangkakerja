@@ -1,0 +1,13 @@
+<div ng-cloak>
+  <md-content class="md-padding">
+    <md-tabs class="md-accent" md-selected="tabstartidx" md-align-tabs="top">
+      <md-tab ng-repeat="tab in tabs">
+        <md-tab-label>{{ tab.title }}</md-tab-label>
+        <md-tab-body>
+          {{ tab.body }}
+        </md-tab-body>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+
+</div>
