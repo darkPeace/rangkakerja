@@ -5,7 +5,7 @@ angular.module('uirconfig', ['ui.router'])
 		url: '/',
 		views: {
 			'body': {
-				templateUrl: 'src/body/pieces/tabbed/tabbed.html',
+				templateUrl: 'src/body/pieces/numpad/numpad.html',
 				controller: 'tabbed-controller'
 				// templateUrl: 'src/body/content/frontpage.html',
 				// controller: 'front-controller'
