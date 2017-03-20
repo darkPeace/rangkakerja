@@ -6,7 +6,7 @@ angular.module('uirconfig', ['ui.router'])
 		views: {
 			'body': {
 				templateUrl: 'src/body/pieces/numpad/numpad.html',
-				controller: 'tabbed-controller'
+				controller: 'numpad-controller'
 				// templateUrl: 'src/body/content/frontpage.html',
 				// controller: 'front-controller'
 			}

@@ -8,5 +8,6 @@ angular.module('pitxweb', [
 	'header-module',
 	'front-module',
 	'tabbed-module',
+	'numpad-module',
 	'footer-module'
 	]);
