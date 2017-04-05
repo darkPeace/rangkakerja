@@ -3,15 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>PiTSynergy Web Tools</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <!-- bower:css -->
-        <!-- endbower -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="src/css/main.css">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="libs/angular-material/angular-material.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <!-- endbuild -->
         <base href="/">
     </head>
     <body>
@@ -19,7 +24,7 @@
             <img ng-src="{{brand.imgUrl}}" alt="logo syarikat" class="header-img" ng-click="locate('')"/>
             <div flex>
                 <div layout="row">
-                    <span class="md-display-2" flex md-truncate>{{ brand.name }}</span>
+                    <span class="md-display-1" flex md-truncate>{{ brand.name }}</span>
 
                     <md-menu-bar class="header">
                      <md-menu ng-repeat="menu in menulist">
@@ -40,23 +45,33 @@
         <md-content layout-padding ui-view="body" class="body"></md-content>
         <!-- <div ui-view="footer"></div> -->
         <!-- // uiview injector -->
-        <md-toolbar class="md-tall md-accent" layout="row">
-          <div flex>
+        <md-toolbar class="md-tall md-accent md-subhead" layout="row" ng-controller="footer-controller">
+          <div flex="30" layout="column" layout-padding layout-align="start center">
+            <div flex>
+              &copy; <span>{{ foot.year }}</span> <span>{{ foot.brand }}</span>
+            </div>
           </div>
-          <div flex>
+          <div flex="70" layout="column" layout-padding>
+            <div flex layout-align="end center">
+              {{ foot.description }}
+            </div>
           </div>
         </md-toolbar>
 
-        <!-- bower:js -->
-        <!-- endbower -->
-        <script src="src/js/main.js"></script>
-        <script src="src/js/uirconfig.js"></script>
-        <script src="src/js/ngMatconfig.js"></script>
-        <script src="src/js/directive.js"></script>
-        <script src="src/component/header/header.js"></script>
-        <script src="src/component/footer/footer.js"></script>
-        <script src="src/body/content/frontpage.js"></script>
-        <script src="src/body/pieces/tabbed/tabbed.js"></script>
-        <script src="src/body/pieces/numpad/numpad.js"></script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="libs/angular-animate/angular-animate.js"></script>
+    <script src="libs/angular-aria/angular-aria.js"></script>
+    <script src="libs/angular-messages/angular-messages.js"></script>
+    <script src="libs/angular-material/angular-material.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/frontpage.js"></script>
+        <!-- endbuild -->
     </body>
 </html>

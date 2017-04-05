@@ -3,8 +3,11 @@ rel/*
 libs/*
 !libs/.resv
 bower.json
-test.js
+test**
 tile.png
 tile.jpg
 src/body/content/houseOfcards.html
 img/
+**dead_*
+.tmp/*
+dist/
