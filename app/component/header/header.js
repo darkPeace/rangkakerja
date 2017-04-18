@@ -5,7 +5,7 @@ angular.module('header-module',[])
 		function (vm, route, timo) {
 
 	vm.brand = {
-		name: 'abs',
+		name: 'PiTSynergy',
 		imgUrl: 'tile.png'
 	};
 	vm.menulist = [{

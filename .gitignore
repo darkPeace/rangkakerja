@@ -2,7 +2,6 @@ node_modules/
 rel/*
 libs/*
 !libs/.resv
-bower.json
 test**
 tile.png
 tile.jpg

@@ -1,0 +1,15 @@
+{
+  "name": "web",
+  "description": "plomo group",
+  "main": "index.html",
+  "authors": [
+    "Hafiz Abu Tahir"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/darkPeace/rangkakerja",
+  "private": true,
+  "dependencies": {
+    "angular-ui-router": "^0.4.2",
+    "angular-material": "^1.1.3"
+  }
+}

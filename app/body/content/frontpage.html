@@ -11,6 +11,28 @@
   </md-icon>
 </div>
 
+<md-content class="md-padding" layout-xs="column" layout="row">
+
+  <md-card md-theme="default" class="md-whiteframe-10dp" flex ng-repeat="app in cards">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{ app.title }}</span>
+        <span class="md-subhead">{{ app.desc }}</span>
+      </md-card-title-text>
+      <md-card-title-media>
+        <div class="md-media-lg card-media">
+          <img ng-src="{{ app.img }}" alt="">
+        </div>
+      </md-card-title-media>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button ng-click="assign(app.funame1)">{{ app.funame1 }}</md-button>
+      <md-button ng-click="assign(app.funame2)">{{ app.funame2 }}</md-button>
+    </md-card-actions>
+  </md-card>
+
+</md-content>
+
 
 
 

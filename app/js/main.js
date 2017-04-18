@@ -5,9 +5,12 @@ angular.module('pitxweb', [
 
 	'cusdirv',
 	
+	'utility-module',
+
 	'header-module',
 	'front-module',
-	'tabbed-module',
-	'numpad-module',
 	'footer-module'
-	]);
+	]
+)
+
+;

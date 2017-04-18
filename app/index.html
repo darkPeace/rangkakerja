@@ -16,6 +16,7 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="css/main.css">
         <!-- endbuild -->
         <base href="/">
     </head>
@@ -24,7 +25,7 @@
             <img ng-src="{{brand.imgUrl}}" alt="logo syarikat" class="header-img" ng-click="locate('')"/>
             <div flex>
                 <div layout="row">
-                    <span class="md-display-1" flex md-truncate>{{ brand.name }}</span>
+                    <div class="md-display-1" flex md-truncate>{{ brand.name }}</div>
 
                     <md-menu-bar class="header">
                      <md-menu ng-repeat="menu in menulist">
@@ -71,7 +72,14 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/frontpage.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/uirconfig.js"></script>
+        <script src="js/ngMatconfig.js"></script>
+        <script src="js/utility.js"></script>
+        <script src="js/directive.js"></script>
+        <script src="component/header/header.js"></script>
+        <script src="component/footer/footer.js"></script>
+        <script src="body/content/frontpage.js"></script>
         <!-- endbuild -->
     </body>
 </html>
