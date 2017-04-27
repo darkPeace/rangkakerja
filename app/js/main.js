@@ -6,6 +6,8 @@ angular.module('pitxweb', [
 	'cusdirv',
 	
 	'utility-module',
+	'dash',
+	'login',
 
 	'header-module',
 	'front-module',

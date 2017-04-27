@@ -16,9 +16,3 @@ kerjaku xsiap2 lg ;(
 `libs/` - bower dependency library
 
 `node_modules/` - node dependency libraries
-
-### Command
-
-`grunt test` to start your development environment.
-
-`grunt miniAll` to minify js, image, html, and css.
